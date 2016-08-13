@@ -14,6 +14,7 @@ server.listen(PORT);
 io.on('connection', (socket)=> {
   console.log("Client Connected");
   socket.on('disconnect', () => console.log("Client Disconnected"));
+  socket.on('message', (message)=> io.emit('receive-message', message));
 });
 
 app.use('/app', express.static(__dirname + '/app'));
