@@ -7,7 +7,7 @@ var express = require('express'),
 const PORT = process.env.PORT || 3000;
 const INDEX = __dirname + '/index.html';
 
-const server = express()
+var server = express()
   .use((req, res) => res.sendFile(INDEX) )
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
