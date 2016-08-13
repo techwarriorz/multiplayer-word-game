@@ -4,8 +4,15 @@ var express = require('express'),
     socketIO      = require('socket.io');
     //http.listen(process.env.PORT || 5000);
 
-const server = express().use((req, res) => res.sendFile(INDEX) ).listen(process.env.PORT || 80, () => console.log(`Listening on ${ process.env.PORT || 80 }`));
+const PORT = process.env.PORT || 3000;
+const INDEX = __dirname + '/index.html';
+
+const server = express()
+  .use((req, res) => res.sendFile(INDEX) )
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
 const io = socketIO(server);
+
 
 io.on('connection', (socket)=> {
   console.log("Client Connected");
