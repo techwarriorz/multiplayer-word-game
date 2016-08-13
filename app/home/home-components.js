@@ -16,7 +16,12 @@ var Chat = React.createClass({
       var messages = self.state.messages;
           messages.push(message);
       self.setState({messages: messages});
-    })
+    });
+
+    if (this.state.username !== "guest"){
+      var username = JSON.parse(this.state.username);
+      this.setState({username: username});
+    }
   },
   login: function(){
     var self = this;
