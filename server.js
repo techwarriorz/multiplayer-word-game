@@ -4,11 +4,12 @@ var express = require('express'),
     io      = require('socket.io')(http);
     http.listen(process.env.PORT || 5000);
 
+app.set('port', (process.env.PORT || 5000));
 app.use('/app', express.static(__dirname + '/app'));
 app.get('/', function(req, res){
   res.sendFile(__dirname + "/index.html");
 });
 
-app.listen(process.env.PORT || 5000, function(){
+app.listen(app.get('port'), function(){
   console.log("this is running");
 });
