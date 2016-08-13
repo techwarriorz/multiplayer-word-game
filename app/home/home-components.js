@@ -6,7 +6,7 @@ var Chat = React.createClass({
   getInitialState: function(){
     return {
       socket: io(),
-      username: "guest",
+      username: localStorage.getItem('username') || "guest",
       messages: []
     }
   },
@@ -19,12 +19,15 @@ var Chat = React.createClass({
     })
   },
   login: function(){
+    var self = this;
     var xhttp = new XMLHttpRequest();
         xhttp.open("POST", "/signup");
         xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
         xhttp.onreadystatechange = function(){
           if (xhttp.readyState === 4 && xhttp.status === 200){
             console.log(xhttp.responseText);
+            self.setState({username: document.getElementById('username').value});
+            localStorage.setItem('username', JSON.stringify(document.getElementById('username').value));
           }
         };
         xhttp.send(JSON.stringify({
