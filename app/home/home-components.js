@@ -1,7 +1,7 @@
 var Chat = React.createClass({
   getInitialState: function(){
     return {
-      socket: io('https://multiplayer-word-game.herokuapp.com/')
+      socket: io()
     }
   },
   render: function(){
