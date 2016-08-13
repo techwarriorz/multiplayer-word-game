@@ -47,8 +47,14 @@ var Chat = React.createClass({
     var messages = this.state.messages.map(function(message){
       return (<li><strong>{message.username}: </strong> <span>{message.message}</span></li>)
     });
+    var userLogin;
+    if (this.state.username === "guest"){
+      userLogin =<div> <input type="text" id="username"/> <input type="password" id="password"/> <button onClick={this.login}> Login </button></div>;
+    } else {
+      userLogin = <div> <strong> You are logged in as {this.state.username} </strong> </div>
+    }
     return(<div>
-      <input type="text" id="username"/> <input type="password" id="password"/> <button onClick={this.login}> Login </button> <br/>
+      {userLogin} <br/>
       <ul>{messages}</ul>
       <input type="text" id="message"/> <button onClick={this.sendMessage}/>
     </div>)
