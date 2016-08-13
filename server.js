@@ -4,7 +4,7 @@ var express = require('express'),
     socketIO      = require('socket.io');
     //http.listen(process.env.PORT || 5000);
 
-const server = express().use((req, res) => res.sendFile(INDEX) ).listen(PORT, () => console.log(`Listening on ${ PORT }`));
+const server = express().use((req, res) => res.sendFile(INDEX) ).listen(process.env.PORT || 80, () => console.log(`Listening on ${ process.env.PORT || 80 }`));
 const io = socketIO(server);
 
 io.on('connection', (socket)=> {
