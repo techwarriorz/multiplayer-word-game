@@ -13,7 +13,7 @@ server.use('/app', express.static(__dirname + '/app'));
 server.get('/', function(req, res){
   res.sendFile(__dirname + "/index.html");
 });
-const io = socketIO(http);
+const io = socketIO(server);
 
 
 io.on('connection', (socket)=> {
