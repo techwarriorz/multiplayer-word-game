@@ -7,9 +7,8 @@ var express = require('express'),
 const PORT = process.env.PORT || 3000;
 const INDEX = __dirname + '/index.html';
 
-var server = express()
-  .use((req, res) => res.sendFile(INDEX) )
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+var server = express();
+
 
 const io = socketIO(server);
 
@@ -25,4 +24,6 @@ server.use('/app', express.static(__dirname + '/app'));
 server.get('/', function(req, res){
   res.sendFile(__dirname + "/index.html");
 });
+
+server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
