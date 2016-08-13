@@ -1,6 +1,6 @@
 var express = require('express'),
     app     = express(),
-    //http    = require('http').Server(app),
+    http    = require('http').Server(app),
     socketIO      = require('socket.io');
     //http.listen(process.env.PORT || 5000);
 
@@ -8,9 +8,12 @@ const PORT = process.env.PORT || 3000;
 const INDEX = __dirname + '/index.html';
 
 var server = express();
-
-
-const io = socketIO(server);
+server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+server.use('/app', express.static(__dirname + '/app'));
+server.get('/', function(req, res){
+  res.sendFile(__dirname + "/index.html");
+});
+const io = socketIO(http);
 
 
 io.on('connection', (socket)=> {
@@ -20,10 +23,7 @@ io.on('connection', (socket)=> {
 
 
 
-server.use('/app', express.static(__dirname + '/app'));
-server.get('/', function(req, res){
-  res.sendFile(__dirname + "/index.html");
-});
 
-server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
+
 
