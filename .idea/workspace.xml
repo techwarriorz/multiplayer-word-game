@@ -21,11 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+            <state vertical-scroll-proportion="0.14285715">
+              <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -61,11 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home-components.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home-components.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/home/home-components.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8">
-              <caret line="47" column="92" selection-start-line="47" selection-start-column="92" selection-end-line="47" selection-end-column="92" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#243#458#0" expanded="false" />
@@ -96,9 +96,9 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/server/datasets/user.js" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/server/controllers/user-controller.js" />
         <option value="$PROJECT_DIR$/app/home/home-components.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -408,14 +408,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/controllers/user-controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -426,13 +418,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/home/home-components.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8">
-          <caret line="47" column="92" selection-start-line="47" selection-start-column="92" selection-end-line="47" selection-end-column="92" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#243#458#0" expanded="false" />
             <element signature="e#1022#1219#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14285715">
+          <caret line="5" column="40" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
