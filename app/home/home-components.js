@@ -45,7 +45,7 @@ var Chat = React.createClass({
       return (<li><strong>{message.username}: </strong> <span>{message.message}</span></li>)
     });
     return(<div>
-      <input type="text" id="username"/> <input type="password" id="password"/> <button onCLick={this.login}> Login </button> <br/>
+      <input type="text" id="username"/> <input type="password" id="password"/> <button onClick={this.login}> Login </button> <br/>
       <ul>{messages}</ul>
       <input type="text" id="message"/> <button onClick={this.sendMessage}/>
     </div>)
