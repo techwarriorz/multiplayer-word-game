@@ -1,6 +1,6 @@
 var express = require('express'),
     app     = express(),
-    http    = require('http').Server(app),
+    //http    = require('http').Server(app),
     socketIO      = require('socket.io');
     //http.listen(process.env.PORT || 5000);
 
