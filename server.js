@@ -12,6 +12,8 @@ const io = socketIO.listen(server);
 server.listen(PORT);
 mongoose.connect(process.env.MONGOLINK);
 
+var userController = require('./server/controllers/user-controller.js');
+
 io.on('connection', (socket)=> {
   console.log("Client Connected");
   socket.on('disconnect', () => console.log("Client Disconnected"));
@@ -24,8 +26,7 @@ app.get('/', function(req, res){
 });
 
 //User Create
-
-//User Login
+app.post('/signup', userController.signup);
 
 
 

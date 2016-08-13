@@ -18,6 +18,20 @@ var Chat = React.createClass({
       self.setState({messages: messages});
     })
   },
+  login: function(){
+    var xhttp = new XMLHttpRequest();
+        xhttp.open("POST", "/signup");
+        xhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        xhttp.onreadystatechange = function(){
+          if (xhttp.readyState === 4 && xhttp.status === 200){
+            console.log(xhttp.responseText);
+          }
+        };
+        xhttp.send(JSON.stringify({
+          username: document.getElementById('username').value,
+          password: document.getElementById('password').value
+        }));
+  },
   sendMessage: function(){
     var self = this;
     var message = {
@@ -30,7 +44,9 @@ var Chat = React.createClass({
     var messages = this.state.messages.map(function(message){
       return (<li><strong>{message.username}: </strong> <span>{message.message}</span></li>)
     });
-    return(<div><ul>{messages}</ul>
+    return(<div>
+      <input type="text" id="username"/> <input type="password" id="password"/> <button onCLick={this.login}> Login </button> <br/>
+      <ul>{messages}</ul>
       <input type="text" id="message"/> <button onClick={this.sendMessage}/>
     </div>)
   }
