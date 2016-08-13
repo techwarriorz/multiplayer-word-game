@@ -1,15 +1,16 @@
 var express = require('express'),
     app     = express(),
     http    = require('http'),
-    socketIO      = require('socket.io');
+    socketIO      = require('socket.io'),
+    mongoose      = require('mongoose');
     //http.listen(process.env.PORT || 5000);
 
 const PORT = process.env.PORT || 3000;
 const INDEX = __dirname + '/index.html';
-
 var server = http.createServer(app);
 const io = socketIO.listen(server);
 server.listen(PORT);
+mongoose.connect(process.env.MONGOLINK);
 
 io.on('connection', (socket)=> {
   console.log("Client Connected");
@@ -21,6 +22,11 @@ app.use('/app', express.static(__dirname + '/app'));
 app.get('/', function(req, res){
   res.sendFile(__dirname + "/index.html");
 });
+
+//User Create
+
+//User Login
+
 
 
 

@@ -1,3 +1,7 @@
+//Create Login
+//Create Message Component
+//Style Components
+
 var Chat = React.createClass({
   getInitialState: function(){
     return {
