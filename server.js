@@ -21,11 +21,8 @@ io.on('connection', (socket)=> {
 
 
 
-app.use('/app', express.static(__dirname + '/app'));
-app.get('/', function(req, res){
+server.use('/app', express.static(__dirname + '/app'));
+server.get('/', function(req, res){
   res.sendFile(__dirname + "/index.html");
 });
 
-app.listen(process.env.PORT || 80, function(){
-  console.log("this is running");
-});
