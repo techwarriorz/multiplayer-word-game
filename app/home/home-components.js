@@ -36,9 +36,10 @@ var Chat = React.createClass({
         xhttp.onreadystatechange = function(){
           if (xhttp.readyState === 4 && xhttp.status === 200){
             console.log(xhttp.responseText);
+            self.state.socket.emit('join', document.getElementById('username').value);
             self.setState({username: document.getElementById('username').value});
             localStorage.setItem('username', JSON.stringify(document.getElementById('username').value));
-            self.state.socket.emit('join', document.getElementById('username').value);
+
           }
         };
         xhttp.send(JSON.stringify({

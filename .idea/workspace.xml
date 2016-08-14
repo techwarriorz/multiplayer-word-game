@@ -65,12 +65,12 @@
         <entry file="file://$PROJECT_DIR$/app/home/home-components.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6895238">
-              <caret line="40" column="86" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
+              <caret line="38" column="86" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#1642#1890#0" expanded="false" />
-                <element signature="e#1923#2270#0" expanded="false" />
-                <element signature="e#2292#2993#0" expanded="false" />
+                <element signature="e#1643#1891#0" expanded="false" />
+                <element signature="e#1924#2271#0" expanded="false" />
+                <element signature="e#2293#2994#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -402,9 +402,9 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1642#1890#0" expanded="false" />
-            <element signature="e#1923#2270#0" expanded="false" />
-            <element signature="e#2292#2993#0" expanded="false" />
+            <element signature="e#1643#1891#0" expanded="false" />
+            <element signature="e#1924#2271#0" expanded="false" />
+            <element signature="e#2293#2994#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -492,12 +492,12 @@
     <entry file="file://$PROJECT_DIR$/app/home/home-components.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6895238">
-          <caret line="40" column="86" selection-start-line="40" selection-start-column="86" selection-end-line="40" selection-end-column="86" />
+          <caret line="38" column="86" selection-start-line="38" selection-start-column="86" selection-end-line="38" selection-end-column="86" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#1642#1890#0" expanded="false" />
-            <element signature="e#1923#2270#0" expanded="false" />
-            <element signature="e#2292#2993#0" expanded="false" />
+            <element signature="e#1643#1891#0" expanded="false" />
+            <element signature="e#1924#2271#0" expanded="false" />
+            <element signature="e#2293#2994#0" expanded="false" />
           </folding>
         </state>
       </provider>
