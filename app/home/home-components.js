@@ -70,7 +70,7 @@ var Chat = React.createClass({
   },
   render: function(){
     var messages = this.state.messages.map(function(message){
-      return (<li classList="message"><strong>{message.username}: </strong> <span>{message.message}</span></li>)
+      return (<li className="message"><strong>{message.username}: </strong> <span>{message.message}</span></li>)
     });
     var users = this.state.users.map(function(user){
       return(<li>{user}</li>)
@@ -84,9 +84,9 @@ var Chat = React.createClass({
     }
     return(<div>
       {userLogin} <br/>
-      <ul classList="chat">{messages}</ul>
+      <ul className="chat">{messages}</ul>
 
-      <div classList="user-list">
+      <div className="user-list">
        <h2>users({userCount})</h2>
        <ul>{users}</ul>
       </div><br/>
