@@ -85,11 +85,11 @@ var Chat = React.createClass({
     return(<div>
       {userLogin} <br/>
       <ul className="chat">{messages}</ul>
-
-      <div className="user-list">
-       <h2>users({userCount})</h2>
-       <ul>{users}</ul>
-      </div><br/>
+       <ul className="user-list">
+         <li>users({userCount})</li>
+         {users}
+       </ul>
+     <br/>
       <input type="text" id="message" onKeyDown={this.enterMessage}/> <button id="send" onClick={this.sendMessage}> Send </button>
     </div>)
   }

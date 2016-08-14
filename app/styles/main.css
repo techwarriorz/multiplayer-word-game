@@ -1,12 +1,12 @@
 .chat {
     height: 300px;
-    width: 600px;
+    width: 450px;
     border: 1px solid blue;
     overflow: auto;
     display: inline-block;
 }
 
-.message {
+li {
     list-style: none;
     position: relative;
     left: -25px;
@@ -17,9 +17,8 @@
     height: 300px;
     border: 1px solid blue;
     display: inline-block;
-    position: relative;
-    bottom: 16px;
-    left: -5px;
+    position: absolute;
+    overflow: auto;
 }
 
 #message {
