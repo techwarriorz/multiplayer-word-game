@@ -25,6 +25,7 @@ var Chat = React.createClass({
     if (this.state.username !== "guest"){
       var username = JSON.parse(this.state.username);
       this.setState({username: username});
+      this.state.socket.emit('join', username);
     }
   },
   login: function(){
