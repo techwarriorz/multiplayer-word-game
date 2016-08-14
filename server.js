@@ -14,17 +14,14 @@ server.listen(PORT);
 mongoose.connect(process.env.MONGOLINK);
 var people = {};
 
-function returnPeople(){
-  return people;
-}
-
 var userController = require('./server/controllers/user-controller.js');
 
 io.on('connection', (socket)=> {
   console.log("Client Connected");
   socket.on('join', (username) =>{
     people[socket.id] = username;
-    io.emit('users-updated', returnPeople());
+    console.log(username);
+    io.emit('users-updated', people);
   });
   socket.on('disconnect', () => console.log("Client Disconnected"));
   socket.on('message', (message)=> io.emit('receive-message', message));
