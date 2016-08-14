@@ -13,6 +13,7 @@ const io = socketIO.listen(server);
 server.listen(PORT);
 mongoose.connect(process.env.MONGOLINK);
 var people = {};
+var clientUsers = [];
 
 var userController = require('./server/controllers/user-controller.js');
 
@@ -20,9 +21,12 @@ io.on('connection', (socket)=> {
   console.log("Client Connected");
   socket.on('join', (username) =>{
     updatePeople(username, socket.id);
-    io.emit('users-updated', people);
+    io.emit('users-updated', clientUsers);
   });
-  socket.on('disconnect', () => console.log("Client Disconnected"));
+  socket.on('disconnect', () => {
+    console.log("Client Disconnected");
+    delete people[socket.id];
+  });
   socket.on('message', (message)=> io.emit('receive-message', message));
 });
 
@@ -40,12 +44,16 @@ app.post('/signup', userController.signup);
 
 //functions
 function updatePeople(username, id){
+  var userArray = [];
   for (key in people){
     if (people[key] === username){
       return;
     }
+    userArray.push(people[key]);
   }
+  userArray.push(username);
   people[id] = username;
+  clientUsers = userArray;
 }
 
 
