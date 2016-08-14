@@ -24,8 +24,8 @@
       <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.17142858">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.4">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -65,13 +65,13 @@
         <entry file="file://$PROJECT_DIR$/app/home/home-components.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
+              <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#803#1527#0" expanded="false" />
-                <element signature="e#1554#1802#0" expanded="false" />
-                <element signature="e#1835#2182#0" expanded="false" />
-                <element signature="e#2204#2905#0" expanded="false" />
+                <element signature="e#804#1528#0" expanded="false" />
+                <element signature="e#1555#1803#0" expanded="false" />
+                <element signature="e#1836#2183#0" expanded="false" />
+                <element signature="e#2205#2906#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -107,8 +107,8 @@
         <option value="$PROJECT_DIR$/server/controllers/user-controller.js" />
         <option value="$PROJECT_DIR$/app/styles/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/app/home/home-components.js" />
         <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/app/home/home-components.js" />
       </list>
     </option>
   </component>
@@ -403,10 +403,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#803#1527#0" expanded="false" />
-            <element signature="e#1554#1802#0" expanded="false" />
-            <element signature="e#1835#2182#0" expanded="false" />
-            <element signature="e#2204#2905#0" expanded="false" />
+            <element signature="e#804#1528#0" expanded="false" />
+            <element signature="e#1555#1803#0" expanded="false" />
+            <element signature="e#1836#2183#0" expanded="false" />
+            <element signature="e#2205#2906#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -475,20 +475,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/home/home-components.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#803#1527#0" expanded="false" />
-            <element signature="e#1554#1802#0" expanded="false" />
-            <element signature="e#1835#2182#0" expanded="false" />
-            <element signature="e#2204#2905#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/server/controllers/user-controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -497,10 +483,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/home/home-components.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#804#1528#0" expanded="false" />
+            <element signature="e#1555#1803#0" expanded="false" />
+            <element signature="e#1836#2183#0" expanded="false" />
+            <element signature="e#2205#2906#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17142858">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.4">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="26" />
           <folding />
         </state>
       </provider>

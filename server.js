@@ -20,7 +20,7 @@ io.on('connection', (socket)=> {
   console.log("Client Connected");
   socket.on('join', (username) =>{
     people[socket.id] = username;
-    console.log(username);
+    console.log(username + " " + socket.id);
     io.emit('users-updated', people);
   });
   socket.on('disconnect', () => console.log("Client Disconnected"));

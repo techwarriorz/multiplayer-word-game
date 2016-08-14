@@ -18,7 +18,7 @@ var Chat = React.createClass({
       self.setState({messages: messages});
     });
 
-    this.state.socket.on('update-users', function(users){
+    this.state.socket.on('users-updated', function(users){
       console.log(users);
     });
 
