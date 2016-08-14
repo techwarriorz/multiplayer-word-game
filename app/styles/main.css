@@ -1,14 +1,25 @@
-ul {
+.chat {
     height: 300px;
     width: 600px;
     border: 1px solid blue;
     overflow: auto;
+    display: inline-block;
 }
 
-li {
+.message {
     list-style: none;
     position: relative;
     left: -25px;
+}
+
+.user-list{
+    width: 150px;
+    height: 300px;
+    border: 1px solid blue;
+    display: inline-block;
+    position: relative;
+    bottom: 16px;
+    left: -5px;
 }
 
 #message {
@@ -23,3 +34,4 @@ li {
     height: 30px;
     bottom: 10px;
 }
+

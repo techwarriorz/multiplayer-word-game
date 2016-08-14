@@ -7,7 +7,8 @@ var Chat = React.createClass({
     return {
       socket: io(),
       username: localStorage.getItem('username') || "guest",
-      messages: []
+      messages: [],
+      users: []
     }
   },
   componentDidMount: function(){
@@ -19,7 +20,7 @@ var Chat = React.createClass({
     });
 
     this.state.socket.on('users-updated', function(users){
-      console.log(users);
+      self.setState({users: users});
     });
 
     if (this.state.username !== "guest"){
@@ -69,17 +70,26 @@ var Chat = React.createClass({
   },
   render: function(){
     var messages = this.state.messages.map(function(message){
-      return (<li><strong>{message.username}: </strong> <span>{message.message}</span></li>)
+      return (<li classList="message"><strong>{message.username}: </strong> <span>{message.message}</span></li>)
+    });
+    var users = this.state.users.map(function(user){
+      return(<li>{user}</li>)
     });
     var userLogin;
+    var userCount = this.state.users.length;
     if (this.state.username === "guest"){
-      userLogin =<div> <input type="text" id="username"/> <input type="password" id="password"/> <button onClick={this.login}> Login </button></div>;
+      userLogin =<div> <input type="text" placeholder="username" id="username"/> <input placeholder="password" type="password" id="password"/> <button onClick={this.login}> Login </button></div>;
     } else {
       userLogin = <div> <strong> You are logged in as {this.state.username} </strong> </div>
     }
     return(<div>
       {userLogin} <br/>
-      <ul>{messages}</ul>
+      <ul classList="chat">{messages}</ul>
+
+      <div classList="user-list">
+       <h2>users({userCount})</h2>
+       <ul>{users}</ul>
+      </div><br/>
       <input type="text" id="message" onKeyDown={this.enterMessage}/> <button id="send" onClick={this.sendMessage}> Send </button>
     </div>)
   }
