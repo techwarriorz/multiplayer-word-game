@@ -1,0 +1,25 @@
+ul {
+    height: 300px;
+    width: 600px;
+    border: 1px solid blue;
+    overflow: auto;
+}
+
+li {
+    list-style: none;
+    position: relative;
+    left: -25px;
+}
+
+#message {
+    width: 596px;
+    position: relative;
+    bottom: 10px;
+    height: 30px;
+}
+
+#send {
+    position: relative;
+    height: 30px;
+    bottom: 10px;
+}

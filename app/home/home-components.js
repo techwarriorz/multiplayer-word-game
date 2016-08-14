@@ -47,6 +47,18 @@ var Chat = React.createClass({
        message: document.getElementById('message').value
      };
     self.state.socket.emit('message', message);
+    document.getElementById('message').value = "";
+  },
+  enterMessage: function(event){
+    var self = this;
+    if (event.which === 13 && document.getElementById('message').value.length > 0){
+      var message = {
+        username: self.state.username,
+        message: document.getElementById('message').value
+      };
+      self.state.socket.emit('message', message);
+      document.getElementById('message').value = "";
+    }
   },
   render: function(){
     var messages = this.state.messages.map(function(message){
@@ -61,7 +73,7 @@ var Chat = React.createClass({
     return(<div>
       {userLogin} <br/>
       <ul>{messages}</ul>
-      <input type="text" id="message"/> <button onClick={this.sendMessage}/>
+      <input type="text" id="message" onKeyDown={this.enterMessage}/> <button id="send" onClick={this.sendMessage}> Send </button>
     </div>)
   }
 });
