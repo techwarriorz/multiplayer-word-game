@@ -18,6 +18,10 @@ var Chat = React.createClass({
       self.setState({messages: messages});
     });
 
+    this.state.socket.on('update-users', function(users){
+      console.log(users);
+    });
+
     if (this.state.username !== "guest"){
       var username = JSON.parse(this.state.username);
       this.setState({username: username});
