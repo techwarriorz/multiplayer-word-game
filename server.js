@@ -19,8 +19,7 @@ var userController = require('./server/controllers/user-controller.js');
 io.on('connection', (socket)=> {
   console.log("Client Connected");
   socket.on('join', (username) =>{
-    people[socket.id] = username;
-    console.log(username + " " + socket.id);
+    updatePeople(username, socket.id);
     io.emit('users-updated', people);
   });
   socket.on('disconnect', () => console.log("Client Disconnected"));
@@ -37,6 +36,17 @@ app.get('/', function(req, res){
 
 //User Create
 app.post('/signup', userController.signup);
+
+
+//functions
+function updatePeople(username, id){
+  for (key in people){
+    if (people[key] === username){
+      return;
+    }
+  }
+  people[id] = username;
+}
 
 
 
