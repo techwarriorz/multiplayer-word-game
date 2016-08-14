@@ -38,6 +38,7 @@ var Chat = React.createClass({
             console.log(xhttp.responseText);
             self.setState({username: document.getElementById('username').value});
             localStorage.setItem('username', JSON.stringify(document.getElementById('username').value));
+            self.state.socket.emit('join', document.getElementById('username').value);
           }
         };
         xhttp.send(JSON.stringify({
